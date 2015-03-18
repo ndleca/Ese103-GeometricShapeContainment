@@ -65,23 +65,25 @@ public class Circle {
 	}
 	
 	public double getXmin(){
-		double Xmin;
 		return(this.xc-this.r);
 	}
 	public double getYmin(){
-		double Ymin;
 		return(this.yc-this.r);
 	}
 	public double getXmax(){
-		double Xmax;
 		return(this.xc+this.r);
 	}
 	public double getYmax(){
-		double Ymin;
 		return(this.yc+this.r);
 	}
 	
 	public boolean contains(Circle c){
-		
+		boolean pluto=false;
+		if(this.getXmin()<=c.getXmin())
+			if(this.getYmin()<=c.getYmin())
+				if(this.getXmax()>=c.getXmax())
+					if(this.getYmax()<=c.getYmax())
+						pluto=true;
+		return pluto;
 	}
 }
