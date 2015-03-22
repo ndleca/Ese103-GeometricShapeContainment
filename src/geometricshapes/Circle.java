@@ -90,4 +90,14 @@ public class Circle {
 						pluto=true;
 		return pluto;
 	}
+	
+	public boolean contains(Triangle t){
+		boolean pluto=false;
+		if(this.getXMin()<=t.getXMin())
+			if(this.getYMin()<=t.getYMin())
+				if(this.getXMax()>=t.getXMax())
+					if(this.getYMax()<=t.getYMax())
+						pluto=true;
+		return pluto;
+	}
 }
